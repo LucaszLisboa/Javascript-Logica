@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.btn {
+  margin-top: 20px;
+  margin-right: 10px;
+}
