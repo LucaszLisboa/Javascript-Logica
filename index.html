@@ -26,6 +26,7 @@
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -42,6 +43,14 @@
             pelo usuário.</p>
           <img src="images/exercicio2.png" class="d-block w-100" alt="...">
         </div>
+        <div class="carousel-item">
+          <p>5 – Dado um número inteiro positivo N como entrada de um usuário, escreva um programa
+            que mostre os primeiros N números da sequência de Fibonacci. (A sequência de Fibonacci é
+            iniciada por 0 e 1, e o próximo número é sempre a soma dos dois últimos). Exemplo: <br>
+            Entrada: 8 <br>
+            Resultado: 0, 1, 1, 2, 3, 5, 8, 13</p>
+          <img src="images/exercicio5.png" class="d-block w-100" alt="...">
+        </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -53,8 +62,13 @@
       </button>
     </div>
 
-    <button class="btn btn-primary" onclick="somaDivisores()">Exercício 1</button>
-    <button class="btn btn-primary" onclick="calcularDistanciaEuclidiana()">Exercício 2</button>
+    <article class="buttons">
+      <button class="btn btn-primary" onclick="somaDivisores()">Exercício 1</button>
+      <button class="btn btn-primary" onclick="calcularDistanciaEuclidiana()">Exercício 2</button>
+      <button class="btn btn-primary" onclick="">Exercício 3</button>
+      <button class="btn btn-primary" onclick="">Exercício 4</button>
+      <button class="btn btn-primary" onclick="sequenciaFibonacci()">Exercício 5</button>
+    </article>
 
   </section>
   <footer>
