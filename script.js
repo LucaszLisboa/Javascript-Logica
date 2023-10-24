@@ -39,19 +39,24 @@ function isNumeroValido(valor) {
 
 function sequenciaFibonacci(){
   let term_number = prompt('Digite um número:');
-  let count = 0;
-  let n1 = 0;
-  let n2 = 1;
-  let temp = 0;
-  let result = '';
-  while(count < term_number){
-    result += n1 + ' ';
-    temp = n1 + n2;
-    n1 = n2;
-    n2 = temp
-    count += 1;
+  if(isNaN(term_number)){
+    alert('Digite um número válido')
   }
-  alert('A sequência Fibonacci de ' + term_number + ' termos é : \n' + result);
+  else{
+    let count = 0;
+    let n1 = 0;
+    let n2 = 1;
+    let temp = 0;
+    let result = '';
+    while(count < term_number){
+      result += n1 + ' ';
+      temp = n1 + n2;
+      n1 = n2;
+      n2 = temp
+      count += 1;
+    }
+    alert('A sequência Fibonacci de ' + term_number + ' termos é : \n' + result);
+  }
 }
 
 
