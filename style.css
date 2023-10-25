@@ -16,7 +16,37 @@
   margin-bottom: 20px;
 }
 
+.nav {
+  background-color: #a4ffa9;
+  display: flex;
+  gap: 2em;
+  align-items: center;
+}
+
+.buttons {
+  margin-bottom: 20px;
+}
+
 .btn {
   margin-top: 20px;
   margin-right: 10px;
+}
+
+#footer {
+  background-color: #a4ffa9;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+  margin: -14px;
+  cursor: pointer;
+  padding-top: 20px;
+  padding-bottom: 5px;
 }

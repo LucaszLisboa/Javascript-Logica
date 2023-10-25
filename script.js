@@ -59,4 +59,34 @@ function sequenciaFibonacci(){
   }
 }
 
+function calcularMatriz(){
+  let representacaoMatriz = prompt("Digite a representação da matriz:");
+  const linhas = representacaoMatriz.split(";");
+  const numLinhas = linhas.length
+  const colunas = linhas[0].split(" ").length;
 
+  alert("Essa é uma Matriz de dimensão: \n" + numLinhas + "x" + colunas);
+}
+
+
+function contarPalavras(){
+  let frase = prompt("Digite uma frase:").toLowerCase();
+  let palavras = frase.split(" ");
+  let palavrasUnicas = [];
+  let contagem = [];
+  let result = '';
+  for(let i = 0; i < palavras.length; i++){
+    if(palavrasUnicas.includes(palavras[i])){
+      contagem[palavrasUnicas.indexOf(palavras[i])] += 1;
+    }
+    else{
+      palavrasUnicas.push(palavras[i]);
+      contagem.push(1);
+    }
+  }
+  for(let i = 0; i < palavrasUnicas.length; i++){
+    result += palavrasUnicas[i] + ' (' + contagem[i] + '), ';
+  }
+  result = result.slice(0,-2)
+  alert("Resultado: " + result);
+}
