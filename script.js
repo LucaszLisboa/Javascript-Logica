@@ -1,3 +1,46 @@
+const carousel = new bootstrap.Carousel(document.getElementById('carouselExampleIndicators'));
+
+carousel._element.addEventListener('slide.bs.carousel', function (event) {
+  const indexSlideAtivo = event.to;
+  mostrarExercicio(indexSlideAtivo);
+});
+
+function mostrarExercicio(indexSlideAtivo) {
+  document.getElementById('exercicio1').setAttribute('hidden', 'true');
+  document.getElementById('exercicio2').setAttribute('hidden', 'true');
+  document.getElementById('exercicio3').setAttribute('hidden', 'true');
+  document.getElementById('exercicio4').setAttribute('hidden', 'true');
+  document.getElementById('exercicio5').setAttribute('hidden', 'true');
+
+  // Atualiza o título e mostra o exercício correspondente
+  switch (indexSlideAtivo) {
+    case 0:
+      document.getElementById('exercicio1').removeAttribute('hidden');
+      document.getElementById('title-exercise').innerHTML = "1 - Escreva um programa que mostre a soma de todos os divisores de um dado número X. Um divisor é qualquer número menor que X cujo resto da divisão é igual a 0.<br> Exemplo: Para X = 8, o resultado é 7, pois 7 = 1 + 2 + 4.";
+      break;
+    case 1:
+      document.getElementById('exercicio2').removeAttribute('hidden');
+      document.getElementById('title-exercise').innerHTML = "2 – Considere dois pontos no espaço 2D com as seguintes coordenadas: A(x 1 , y 1 ) e B(x 2 ,y 2 ). A distância euclidiana D, entre estes pontos é dada pela seguinte fórmula: <br> D = √(x 1 - x 2 )² + (y 1 - y 2 )² <br> Escreva um programa que calcule tal distância para coordenadas de dois pontos informados pelo usuário.";
+      break;
+    case 2:
+      document.getElementById('exercicio3').removeAttribute('hidden');
+      document.getElementById('title-exercise').innerHTML = "3 - Dada uma frase de entrada por um usuário, faça um programa que conte a ocorrência de cada palavra nesta frase. O programa não deve distinguir letras maiúsculas e minúsculas. <br> Exemplo: “Faça chuva ou faça sol.” <br> Resultado: faça (2), chuva (1), ou, (1), sol (1)</p>";
+      break;
+    case 3:
+      document.getElementById('exercicio4').removeAttribute('hidden');
+      document.getElementById('title-exercise').innerHTML = "4 – Faça um programa que leia uma string de números como entrada de um usuário que representa uma matriz e diga qual dimensão dela (quantidade de linhas e colunas). As linhas da matriz são separadas por um caractere de ponto e vírgula ‘;’e as colunas são separadas por um espaço vazio ‘ ’, como no exemplo: <br> Entrada: 1 4 6 8; 3 5 6 7; 1 3 2 4 <br> Resultado: Essa é uma matriz de dimensão 3 x 4.";
+      break;
+    case 4:
+      document.getElementById('exercicio5').removeAttribute('hidden');
+      document.getElementById('title-exercise').innerHTML = "5 – Dado um número inteiro positivo N como entrada de um usuário, escreva um programa que mostre os primeiros N números da sequência de Fibonacci. (A sequência de Fibonacci é iniciada por 0 e 1, e o próximo número é sempre a soma dos dois últimos). Exemplo: <br> Entrada: 8 <br> Resultado: 0, 1, 1, 2, 3, 5, 8, 13";
+      break;
+    default:
+      break;
+  }
+}
+
+
+
 function somaDivisores() {
  let number = prompt('Digite um número:');
  let result = 0;
